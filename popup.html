@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body { font: 13px "Segoe UI", system-ui, sans-serif; width: 280px; margin: 0; padding: 12px; color: #1f1f1f; }
+    h1 { font-size: 14px; margin: 0 0 10px; }
+    .current { padding: 10px; border: 1px solid #ddd; border-radius: 6px; margin-bottom: 12px; }
+    .host { font-weight: 600; word-break: break-all; }
+    .status { margin: 4px 0 8px; color: #555; }
+    .status.on { color: #0a7a2f; }
+    button { font: inherit; cursor: pointer; border-radius: 4px; border: 1px solid #0f6cbd; background: #0f6cbd; color: #fff; padding: 5px 10px; }
+    button.secondary { background: #fff; color: #0f6cbd; }
+    button.link { border: none; background: none; color: #b3261e; padding: 0 4px; }
+    ul { list-style: none; padding: 0; margin: 6px 0 10px; }
+    li { display: flex; justify-content: space-between; align-items: center; padding: 3px 0; border-bottom: 1px solid #eee; }
+    form { display: flex; gap: 6px; }
+    input { flex: 1; font: inherit; padding: 4px 6px; border: 1px solid #ccc; border-radius: 4px; }
+    .muted { color: #777; }
+  </style>
+</head>
+<body>
+  <h1>Edge as Chrome</h1>
+
+  <div class="current" id="current" hidden>
+    <div class="host" id="host"></div>
+    <div class="status" id="status"></div>
+    <button id="toggle"></button>
+  </div>
+
+  <strong>Sites</strong>
+  <ul id="list"></ul>
+
+  <form id="add">
+    <input id="domain" placeholder="example.com" autocomplete="off">
+    <button type="submit" class="secondary">Add</button>
+  </form>
+
+  <script src="popup.js"></script>
+</body>
+</html>
